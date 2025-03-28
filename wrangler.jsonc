@@ -1,0 +1,21 @@
+{
+    "name": "celestial-rose",
+    "main": "src/index.ts",
+    "compatibility_date": "2025-03-20",
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
+    "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1
+    },
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "test-celestial-db",
+            "database_id": "963cf29d-918f-4ff8-90fb-13fadeb42a42",
+            "migrations_table": "migrations",
+            "migrations_dir": "packages/api/src/migrations"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "celestial-rose",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "concurrently -n api,web \"bun run dev:api\" \"bun run dev:web\"",
+        "dev:api": "cd packages/api && ENV=dev bun run dev",
+        "dev:web": "cd packages/web && bun run dev",
+        "deploy:all": "concurrently -n api,web \"bun run deploy:api\" \"bun run deploy:web\"",
+        "deploy:api": "cd packages/api && bun run deploy",
+        "deploy:web": "cd packages/web && bun run deploy",
+        "lint": "biome lint .",
+        "format": "biome format --write .",
+        "check": "biome check --apply .",
+        "setup-db": "bun run scripts/setup-db.ts",
+        "setup-env": "bun run scripts/setup-env.ts",
+        "fix-db": "cd packages/web && (rm -rf .wrangler || true) && ln -s ../api/.wrangler .",
+        "generate": "drizzle-kit generate",
+        "migrate": "cd packages/api && wrangler d1 migrations apply [DB-NAME] && cd ../../ && bun fix-db",
+        "migrate:prod": "cd packages/api && wrangler d1 migrations apply [DB-NAME] --remote"
+    },
+    "dependencies": {
+        "@better-auth/cli": "^1.2.4",
+        "@opennextjs/cloudflare": "^0.5.12",
+        "dotenv-cli": "^8.0.0",
+        "kysely": "^0.27.6",
+        "kysely-d1": "^0.3.0"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.0.0-beta.1",
+        "@cloudflare/workers-types": "^4.20250321.0",
+        "concurrently": "^9.1.2",
+        "install": "^0.13.0",
+        "typescript": "^5.0.0",
+        "wrangler": "^4.4.0"
+    }
+}

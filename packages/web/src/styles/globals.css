@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Inconsolata", monospace;
+  --font-display: "Raleway", sans-serif;
+  
+  /* Font feature settings for Inconsolata (monospace) */
+  --font-mono--font-feature-settings: "tnum", "zero";
+  
+  /* Font feature settings for Raleway (display) */
+  --font-display--font-feature-settings: "ss01", "ss03";
+  
+  /* Purple theme colors */
+  --color-primary: #8b5cf6; /* purple-500 */
+  --color-primary-light: #a78bfa; /* purple-400 */
+  --color-primary-dark: #7c3aed; /* purple-600 */
+  --color-primary-bg: #f5f3ff; /* purple-50 */
+  --color-primary-bg-hover: #ede9fe; /* purple-100 */
+}

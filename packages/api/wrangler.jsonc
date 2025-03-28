@@ -1,0 +1,36 @@
+{
+    "name": "celestial-api",
+    "main": "src/index.ts",
+    "compatibility_date": "2025-03-20",
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
+    "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1
+    },
+    "routes": [
+        {
+            "pattern": "api.your-domain.dev",
+            "custom_domain": true
+        }
+    ],
+    "vars": {
+        "BETTER_AUTH_URL": "https://api.your-domain.dev",
+        "BETTER_AUTH_COOKIES_DOMAIN": ".your-domain.dev",
+        "BETTER_AUTH_COOKIES_PREFIX": "my-app",
+        "BETTER_AUTH_SECRET": "",
+        "RESEND_FROM_EMAIL": "noreply@your-domain.dev",
+        "RESEND_API_KEY": "",
+        "ENV": "production"
+    },
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "test-celestial-db",
+            "database_id": "963cf29d-918f-4ff8-90fb-13fadeb42a42",
+            "migrations_table": "migrations",
+            "migrations_dir": "src/migrations"
+        }
+    ]
+}

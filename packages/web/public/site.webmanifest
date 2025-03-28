@@ -1,0 +1,45 @@
+{
+    "name": "@celestial-rose/stack",
+    "short_name": "@celestial-rose/stack",
+    "description": "The Ultimate Full-Stack Meta-Framework for Cloudflare",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#2d1e5e",
+    "theme_color": "#1e1a4d",
+    "lang": "en-US",
+    "dir": "ltr",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "categories": [
+        "technology"
+    ],
+    "screenshots": [],
+    "shortcuts": [],
+    "related_applications": []
+}

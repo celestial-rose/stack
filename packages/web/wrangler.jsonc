@@ -1,0 +1,29 @@
+{
+    "name": "celestial-web",
+    "main": ".open-next/worker.js",
+    "compatibility_date": "2025-03-20",
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
+    "assets": {
+        "directory": ".open-next/assets",
+        "binding": "ASSETS"
+    },
+    "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1
+    },
+    "routes": [
+        {
+            "pattern": "your-domain.dev",
+            "custom_domain": true
+        }
+    ],
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "test-celestial-db",
+            "database_id": "963cf29d-918f-4ff8-90fb-13fadeb42a42"
+        }
+    ]
+}

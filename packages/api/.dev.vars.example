@@ -1,0 +1,11 @@
+## Env
+ENV="local"
+## Better Auth
+BETTER_AUTH_COOKIES_PREFIX="my-app"
+BETTER_AUTH_URL="http://localhost:8787" 
+### Generate the secret with `openssl rand -base64 32``
+BETTER_AUTH_SECRET=""
+## Resend
+RESEND_API_KEY=""
+### Email from which to send Resend OTP
+RESEND_FROM_EMAIL="noreply@your-domain.dev"

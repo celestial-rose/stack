@@ -1,0 +1,26 @@
+{
+    "name": "@celestial/api",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler deploy",
+        "lint": "biome lint src --ext .ts"
+    },
+    "dependencies": {
+        "@celestial/shared": "workspace:*",
+        "@hono/trpc-server": "^0.3.4",
+        "@trpc/server": "^11.0.0",
+        "better-auth": "^1.0.0",
+        "dotenv": "^16.4.7",
+        "drizzle-orm": "^0.39.3",
+        "hono": "^4.7.5",
+        "resend": "^4.2.0",
+        "zod": "^3.0.0"
+    },
+    "devDependencies": {
+        "drizzle-kit": "^0.30.4",
+        "install": "^0.13.0",
+        "typescript": "^5.0.0"
+    }
+}
